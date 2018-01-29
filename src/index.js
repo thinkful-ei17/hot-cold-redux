@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import store from './store';
 
-import {restartGame, makeGuess} from './action';
+import {restartGame, makeGuess, generateAuralUpdate} from './action';
 
 import './reset.css';
 import './index.css';
@@ -21,3 +21,5 @@ store.dispatch(makeGuess(4));
 console.log('state after guess', store.getState());
 store.dispatch(restartGame());
 console.log('state after next Restart', store.getState());
+store.dispatch(generateAuralUpdate());
+console.log('state after aural update',store.getState());
